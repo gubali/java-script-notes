@@ -79,7 +79,7 @@ aync:  It is also very useful for loading scripts in the middle of the DOM which
   - doesnot gaurentee order of execution
 
 
-#Event loop program:
+# Event loop program:
 $.on('button', 'click', function onClick() {
     setTimeout(function timer() {
         console.log('You clicked the button!');    
