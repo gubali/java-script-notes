@@ -133,6 +133,43 @@ myPromise.then(() => {
   console.log("p2")
 })
 
+# ==============================
+let p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(true);
+  }, 5000);
 
+});
+p1.then((val) => {
+  console.log(val);
+}, (error) => {
+  console.log(error)
+});
+
+// let p2 = new Promise((resolve, reject) => {
+//   reject("Im rejected promise");
+// });
+
+// p2.catch((error) => {
+//   console.log("Some error occured in p2");
+// })
+
+//callback example
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// define main function
+function mainFucntion(callback) {
+  console.log("Performing call back");
+  arr.map(callback)
+}
+
+function callbackMethod(item) {
+  var a = item * 2;
+  console.log(a);
+}
+
+mainFucntion(callbackMethod);
+
+# =================================
 
 
