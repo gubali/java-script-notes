@@ -94,6 +94,44 @@ setTimeout(function timeout() {
 
 console.log("Welcome to loupe.");
 
+# Callback example with code
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+# define main function
+function mainFucntion(callback) {
+  console.log("Performing call back");
+  arr.forEach(callback)
+}
+# Define call back function
+function callbackMethod(item) {
+  var a = item * 2;
+  console.log(a);
+}
+mainFucntion(callbackMethod);
+# o/p => all value multiply by 2
+
+# promise example with chainig
+let myPromise = new Promise((resolve, reject) => {
+  let x = "Hello";
+  let y = "Hello";
+  if (x == y) {
+    resolve()
+  }
+  else {
+    reject();
+  }
+});
+myPromise.then(() => {
+  console.log("Success values matched");
+  let p2 = new Promise((resolve, reject) => {
+    resolve("Im nested prmiseof p2")
+  });
+  return p2;
+}).catch(() => {
+  console.log("Server error occured!")
+}).then(() => {
+  console.log("p2")
+})
 
 
 
