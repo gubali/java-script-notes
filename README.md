@@ -154,7 +154,7 @@ p1.then((val) => {
 //   console.log("Some error occured in p2");
 // })
 
-//callback example
+# callback example
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // define main function
@@ -171,5 +171,34 @@ function callbackMethod(item) {
 mainFucntion(callbackMethod);
 
 # =================================
+let alien = {
+    name : 'Chandramouli',
+    tech : 'Javascript',
+    phones : {
+        android_version : '11',
+        ram : '4',
+        brand1 : 'mi'
+    }
+}
+# solution 1
+for(let key in alien.phones)
+{
+    console.log(key, alien.phones[key]);
+}
+# o/p android_version 11
+VM228:12 ram 4
+VM228:12 brand1 mi
 
+# solution 2
+for (const key in alien) {
+  if (Object.hasOwnProperty.call(alien, key)) {
+    const element = alien[key];
+    console.log(element);
+  }
+}
+# o/p {
+    "android_version": "11",
+    "ram": "4",
+    "brand1": "mi"
+}
 
